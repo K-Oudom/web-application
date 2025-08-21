@@ -4,16 +4,126 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV - Jonathan Joe</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <!-- <link rel="stylesheet" href="/css/style.css"> -->
   <script src="/js/script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    }
+    body {
+        background: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+    .cv-container {
+        display: flex;
+        width: 900px;
+        background: #fff;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+    /* Left Panel */
+    .left {
+        background: #0a2540;
+        color: #fff;
+        width: 35%;
+        padding: 30px 20px;
+    }
+    .profile-pic {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .profile-pic img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+    }
+    h2 {
+        font-size: 22px;
+        margin: 15px 0 10px;
+        color: #fff;
+    }
+    .section {
+        margin-bottom: 25px;
+    }
+    .contact p,
+    .social a {
+        font-size: 14px;
+        margin: 5px 0;
+        color: #ddd;
+        text-decoration: none;
+    }
+    .bar {
+        background: #444;
+        border-radius: 5px;
+        overflow: hidden;
+        height: 8px;
+        margin: 8px 0;
+    }
+    .bar span {
+        display: block;
+        height: 100%;
+        background: #2ecc71;
+    }
+    .skills .bar span { background: #3498db; }
+
+    /* Right Panel */
+    .right {
+        width: 65%;
+        padding: 30px;
+    }
+    .header {
+        margin-bottom: 25px;
+    }
+    .header h1 {
+        font-size: 32px;
+        color: #0a2540;
+    }
+    .header h3 {
+        font-weight: 500;
+        color: #3498db;
+    }
+    .right h2 {
+        color: #0a2540;
+        margin-top: 20px;
+        font-size: 20px;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 5px;
+    }
+    .right p {
+        font-size: 14px;
+        margin: 10px 0;
+        line-height: 1.5;
+        color: #555;
+    }
+    .edu, .exp {
+        margin-top: 10px;
+    }
+    .edu h3, .exp h3 {
+        font-size: 16px;
+        color: #3498db;
+    }
+    .edu span, .exp span {
+        font-size: 13px;
+        color: #777;
+    }
+    .link-web{
+        color: #fff;
+        text-decoration:none;
+    }
+  </style>
 </head>
 <body>
   <div class="cv-container">
     <!-- Left Panel -->
     <div class="left">
       <div class="profile-pic">
-        <img src="/images/profile/oudom.png" alt="CV Profile">
+        <img src="./images/profile/oudom.png" alt="CV Profile">
       </div>
       <div class="section contact">
         <h2>Contact</h2>
@@ -92,5 +202,15 @@
       </div>
     </div>
   </div>
+  <script>
+     // Small JS example: Animate progress bars on load
+    window.addEventListener("load", () => {
+        document.querySelectorAll(".bar span").forEach(bar => {
+        let width = bar.style.width;
+        bar.style.width = "0";
+        setTimeout(() => { bar.style.width = width; }, 300);
+        });
+    });
+  </script>
 </body>
 </html>
